@@ -1,0 +1,124 @@
+# End-to-End Spotify Data Pipeline Using AWS S3, Athena, Glue and QuickSight
+
+## Project Overview
+
+In today's data-driven world, building scalable and cost-efficient data pipelines in the cloud is a key skill for aspiring data engineers. This project demonstrates how to build an end-to-end data engineering pipeline on AWS, using a real-world dataset from Spotify. We’ll process, analyze, and visualize a real-world dataset from Spotify, using tools like Amazon S3, AWS Glue, Athena, and QuickSight.
+
+## Architecture
+
+*Insert your architecture diagram here if available.*
+
+## Tools & Services
+
+This project leverages several key AWS services to handle the full data pipeline:
+
+- **Amazon S3** is used for storing both raw and transformed data. It's a scalable object storage service that serves as the backbone of our pipeline's data lake.
+- **AWS Glue** is a serverless ETL (Extract, Transform, Load) service that allows us to visually or programmatically build data workflows. In this project, it transforms raw CSV data into optimized Parquet files.
+- **AWS Glue Crawler** automatically scans the processed data in S3 and creates schema definitions (tables) in the AWS Glue Data Catalog, which makes the data queryable in Athena.
+- **AWS Athena** is a serverless, interactive SQL query service. It allows you to write SQL queries directly on data stored in S3 without needing to set up any servers.
+- **AWS QuickSight** is a powerful business intelligence tool used to create interactive dashboards and visualizations based on the insights generated through Athena queries.
+- **AWS IAM (Identity and Access Management)** is used to create secure users and roles, ensuring that only authorized entities can access or modify your AWS resources.
+
+## Dataset Details
+
+The dataset used in this project comes from Kaggle - Spotify Dataset 2023. The dataset is available in CSV format and has been pre-processed for use in this project. The dataset includes details on:
+
+- **Albums:** Contains details of all the albums, including album ID, name, popularity, and release date.
+- **Artists:** Contains information about the artists, including their names, number of followers, and genres.
+- **Tracks:** Contains track-level data, including track ID, popularity, and other features like danceability and energy.
+
+> All files are manually uploaded to S3 for this project.
+
+## The Workflow: Step-by-Step
+
+### Step 1: Setting Up AWS IAM User and IAM Role
+
+1. **Create a new IAM User**
+    - In the AWS Management Console, search for IAM and open the service.
+    - Navigate to Users > Create user.
+    - Assign the following permission policies to the new IAM user:
+        - Amazon S3 Full Access
+        - AWS Glue Console Full Access
+        - Amazon Athena Full Access
+        - AWS QuickSight Athena Access
+        - AWS QuickSight Describe RDS
+
+2. **Create a new IAM role for S3 & Glue access**
+    - Create a new role with the following permission policies:
+        - Amazon S3 Full Access
+        - AWS Glue Console Full Access
+
+### Step 2: Creating S3 Buckets
+
+1. **Create a new S3 bucket with two folders:** `staging` and `datawarehouse`.
+    - `staging/`: for uploading source data files
+    - `datawarehouse/`: for storing transformed data
+
+2. **Upload Pre-Processed CSV Files to the staging folder**
+
+### Step 3: Setting Up AWS Glue for ETL
+
+1. **Create a New Glue Job**
+    - Navigate to the AWS Glue Console and select Visual ETL to create a visual workflow that transforms data from the staging folder and loads it into the datawarehouse folder.
+
+2. **Set Up Data Sources**
+    - Since there are three source files, use three Amazon S3 source nodes.
+
+3. **Configure Data Transformations:**
+    - To join album and artist, click on the ADD symbol, select join from Transforms and connect nodes as per your workflow.
+    - Add a condition where `artist.id = albums.artist_id` and rename the join as “Join Album and Artist”.
+    - Add another Join Transform to join the tracks S3 bucket with the previous join.
+    - To drop unnecessary columns, select Drop Fields from the Transforms node.
+
+4. **Set Up Data Target**
+    - Add the destination as the Amazon S3 bucket in the Targets Section.
+    - Add the job name, select the IAM role created above, and save the visual ETL.
+
+5. **Run the Glue Job**
+    - Click "Run job" to start the ETL process, transforming and moving data from the staging layer to the data warehouse.
+    - Check whether the transformed data is inside the datawarehouse folder.
+
+### Step 4: Creating a Data Catalog with AWS Glue Crawler
+
+1. **Create a New Database**
+    - Go to AWS Glue > Data Catalog > Databases, and create a new database.
+
+2. **Create a New Crawler**
+    - In the AWS Glue dashboard, go to the Data Catalog section and click on Crawlers, then click Create crawler.
+    - Provide a Crawler Name.
+    - Add Data Store: Select S3 and provide the path to the datawarehouse folder.
+    - Provide the IAM Role created earlier.
+    - Select the created database.
+
+3. **Run the Crawler**
+    - After setting up the crawler, click "Run crawler."
+    - The crawler will scan the data in the datawarehouse folder and create corresponding tables in the spotify_database database.
+    - Check the database tables.
+
+### Step 5: Querying Data with AWS Athena
+
+1. **Set Up Query Result Storage**
+    - Navigate to AWS Athena from the AWS Management Console, then go to Launch query editor.
+    - Before running any queries, specify a location for query results.
+    - Create a new S3 bucket to store Athena query results.
+    - In the Athena settings, set the query result location to this new bucket.
+
+2. **Write SQL Queries**
+    - Select data source and database.
+    - Now start querying the data.
+
+### Step 6: Visualizing Data with AWS QuickSight
+
+1. **Sign Up for AWS QuickSight**
+
+2. **Connect QuickSight to Athena**
+    - Once signed in, go to "Datasets" and click "New dataset."
+    - Select "Athena" as the data source and give it a name.
+    - Choose the spotify_data database and the datawarehouse table.
+
+3. **Create Visualizations**
+    - After importing the data, you can create various types of visualizations (e.g., bar charts, line charts, pie charts) using the fields from the datawarehouse table.
+
+---
+
+*Feel free to add screenshots or diagrams for each step to enhance clarity!*
