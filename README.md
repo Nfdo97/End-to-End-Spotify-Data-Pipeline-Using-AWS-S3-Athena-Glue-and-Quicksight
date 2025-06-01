@@ -66,6 +66,7 @@ All files are manually uploaded to S3 for this project.
   <img src="https://drive.google.com/uc?export=view&id=1P0cRZrn0L-j2RNllYiemwIdjiiEKTu6N" style="margin-top: 40px; margin-bottom: 40px; />
 </p>
 
+
 ### Step 2: Creating S3 Bucket
 
 1. **Create a new S3 bucket with two folders:** `staging` and `datawarehouse`.
