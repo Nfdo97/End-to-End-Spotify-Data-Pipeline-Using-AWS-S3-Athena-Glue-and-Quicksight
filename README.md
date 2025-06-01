@@ -30,7 +30,7 @@ The dataset used in this project comes from Kaggle - Spotify Dataset 2023. The d
 - **Artists:** Contains information about the artists, including their names, number of followers, and genres.
 - **Tracks:** Contains track-level data, including track ID, popularity, and other features like danceability and energy.
 
-> All files are manually uploaded to S3 for this project.
+All files are manually uploaded to S3 for this project.
 
 ## The Workflow: Step-by-Step
 
@@ -46,10 +46,22 @@ The dataset used in this project comes from Kaggle - Spotify Dataset 2023. The d
         - AWS QuickSight Athena Access
         - AWS QuickSight Describe RDS
 
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1x2nYAWA6Tf6-jhdh5jruhKuA2Y6EVDV4" alt="Description of image" />
+</p>
+
 2. **Create a new IAM role for S3 & Glue access**
     - Create a new role with the following permission policies:
         - Amazon S3 Full Access
         - AWS Glue Console Full Access
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1RcvcT6Vq3b7HAEJowLSVfVpUbU2fskCB" alt="Description of image" />
+</p>
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1P0cRZrn0L-j2RNllYiemwIdjiiEKTu6N" alt="Description of image" />
+</p>
 
 ### Step 2: Creating S3 Buckets
 
@@ -57,21 +69,51 @@ The dataset used in this project comes from Kaggle - Spotify Dataset 2023. The d
     - `staging/`: for uploading source data files
     - `datawarehouse/`: for storing transformed data
 
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1aABEeU4gas9zuKZvX_Fy0vDjZKUVmyOu" />
+</p>
+
+
 2. **Upload Pre-Processed CSV Files to the staging folder**
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1R5V4jqvFPRN8GeDLja3JZAyLwnyU_gWy" />
+</p>
+
 
 ### Step 3: Setting Up AWS Glue for ETL
 
 1. **Create a New Glue Job**
     - Navigate to the AWS Glue Console and select Visual ETL to create a visual workflow that transforms data from the staging folder and loads it into the datawarehouse folder.
 
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1UNk93GGM2SouQCjiTbFCJq-yxXToWK1n" />
+</p>
+
 2. **Set Up Data Sources**
     - Since there are three source files, use three Amazon S3 source nodes.
+
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1f-RBuY_amXEzj2OTEqqhnXiTmYrx-goe" />
+</p>
+
+ <p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1Tdm4OhUlVWNCamtBGDvZK0_t31Q8NJrd" />
+</p>
+
+ <p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1_qrQiPvW5_3Ya-Lv0CbyNVYzUYcvmTuE" />
+</p>
 
 3. **Configure Data Transformations:**
     - To join album and artist, click on the ADD symbol, select join from Transforms and connect nodes as per your workflow.
     - Add a condition where `artist.id = albums.artist_id` and rename the join as “Join Album and Artist”.
     - Add another Join Transform to join the tracks S3 bucket with the previous join.
     - To drop unnecessary columns, select Drop Fields from the Transforms node.
+  
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1J8OUlKj6NElw87eXJxPKdonbOMK34PG9" />
+</p>
 
 4. **Set Up Data Target**
     - Add the destination as the Amazon S3 bucket in the Targets Section.
