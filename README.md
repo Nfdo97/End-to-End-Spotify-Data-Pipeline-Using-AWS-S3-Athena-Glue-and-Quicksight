@@ -25,7 +25,7 @@ This project leverages several key AWS services to handle the full data pipeline
 
 ## Dataset Details
 
-The dataset used in this project comes from [Kaggle - Spotify Dataset 2023](https://www.kaggle.com/datasets/tonygordonjr/spotify-dataset-2023). The dataset is available in CSV format and has been pre-processed for use in this project. The dataset includes details on:
+The dataset used in this project comes from [Kaggle - Spotify Dataset 2023](https://www.kaggle.com/datasets/tonygordonjr/spotify-dataset-2023). The dataset is available in CSV format and has been [pre-processed](https://drive.google.com/drive/folders/1W-xm-sdTySD3rwZVuZqGfzOmUeFg0fiL?usp=drive_link) for use in this project. The dataset includes details on:
 
 - **Albums:** Contains details of all the albums, including album ID, name, popularity, and release date.
 - **Artists:** Contains information about the artists, including their names, number of followers, and genres.
