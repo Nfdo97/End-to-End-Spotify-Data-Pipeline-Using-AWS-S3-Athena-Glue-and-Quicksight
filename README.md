@@ -144,7 +144,7 @@ All files are manually uploaded to S3 for this project.
   />
 </p>
 
-     - Add the job name, select the IAM role created above, and save the visual ETL.
+- Add the job name, select the IAM role created above, and save the visual ETL.
   
 <p align="center">
   <img 
