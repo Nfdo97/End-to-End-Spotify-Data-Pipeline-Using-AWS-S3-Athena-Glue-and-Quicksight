@@ -49,7 +49,10 @@ All files are manually uploaded to S3 for this project.
         - AWS QuickSight Describe RDS
 
 <p align="center">
-  <img src="![Screenshot 1](https://drive.google.com/uc?export=view&id=1Gli50B9BfmtD7Y9s2sR0dZCHVIOtwGqR)" alt="Description of image" style="margin-top: 30px; margin-bottom: 30px;"  />
+  <img 
+    src="https://drive.google.com/uc?export=view&id=1Gli50B9BfmtD7Y9s2sR0dZCHVIOtwGqR" 
+    alt="Description of image" 
+    style="margin-top: 30px; margin-bottom: 30px;"  />
 </p>
 
 2. **Create a new IAM role for S3 & Glue access**
