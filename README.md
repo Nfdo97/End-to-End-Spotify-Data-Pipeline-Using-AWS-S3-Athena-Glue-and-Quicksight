@@ -125,7 +125,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1nIXTlVuB89CUlrHsOx6JUP3pvaCiY6lC"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-
+</p>
     
 4. **Set Up Data Target**
     - Add the destination as the Amazon S3 bucket in the Targets Section.
@@ -135,21 +135,24 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1AgrrvDYYaolodFla0icPo8PoGUkryNLI"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1W88pZfGZgrj3PMUksZ4K3M4NpV5gmkrA"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
-- Add the job name, select the IAM role created above, and save the visual ETL.
+     - Add the job name, select the IAM role created above, and save the visual ETL.
   
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1MBYyJ8GrISQs-vxTbc9rOI6XiH_v6Pvr"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-      
+</p>
+
 5. **Run the Glue Job**
     - Click "Run job" to start the ETL process, transforming and moving data from the staging layer to the data warehouse.
 
@@ -158,13 +161,15 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1S_w-Kazg1nFx5_qxfO8cmvJJrJAoVlZz"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1tfKbH9-L1HlO2lQ71I_jaEai1kFXJV7t"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-  
+</p>
+
 - Check whether the transformed data is inside the datawarehouse folder.
 
 <p align="center">
@@ -172,6 +177,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1FogU4P7RWzbo2NFmaaflqcd4IMLvkNvc"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 ### Step 4: Creating a Data Catalog with AWS Glue Crawler
 
@@ -183,6 +189,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1ybOS5lxl7yD9TK-Og-kWSOa4G3TEaXjX"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 2. **Create a New Crawler**
     - In the AWS Glue dashboard, go to the Data Catalog section and click on Crawlers, then click Create crawler.
@@ -192,7 +199,8 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1F3h-cKifWK7mfKZYz3zOdtG9eaetip3E"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-  
+</p>
+
 - Provide a Crawler Name.
 
  <p align="center">
@@ -200,6 +208,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=11d07m7fsssE6CoVNa_BJj67gvQR_8w2S"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 - Add Data Store: Select S3 and provide the path to the datawarehouse folder.
 
@@ -208,13 +217,15 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1LHP_HtNi5cgZCQtmgp5HbgLBoGtQz1tk"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
   <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1eoWxRvOwt_lm7wwdeB1dS2fW_4rJJjiI"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-  
+ </p>
+ 
 - Provide the IAM Role created earlier.
 
 <p align="center">
@@ -222,6 +233,8 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=15_1lovaEK3jAZD7XyMgYYzWBqApI2yV0"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
+
 - Select the created database.
 
 <p align="center">
@@ -229,6 +242,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1DEPNnMVUSB6-_tP-0_lk4mShhXf320M8"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 3. **Run the Crawler**
     - After setting up the crawler, click "Run crawler."
@@ -238,6 +252,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1PleXClvTvmZOqjUx_kLaE5rL3lia9NKb"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 - Check the database tables.
 
@@ -246,12 +261,14 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1VqDT0FHuQGoDMelnPoi0t-OTOxZXmDZl"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1v6QEyGg31C7N0LV5nbRYwhhZQoHXfwVl"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 
 ### Step 5: Querying Data with AWS Athena
@@ -266,6 +283,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1D2CT2irK-NakPm1FAppgfk_21Ro-3Dh3"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 - In the Athena settings, set the query result location to this new bucket.
 
@@ -274,6 +292,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1R7RiHV6cMzCiB24Hrvh7uKnDGcdvv6hH"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 2. **Write SQL Queries**
     - Select data source and database.
@@ -283,12 +302,14 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=17NF_lftFkRIWCR1yIEgTXM_qiouvvwJw"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=1n5pqXVHWo0VqPkHT5EFm5x2hEKoAIvBv"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 ### Step 6: Visualizing Data with AWS QuickSight
 
@@ -298,6 +319,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=10KrWVk27nUL0ryAVUWzXq73arCVvjTT5"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 2. **Connect QuickSight to Athena**
     - Once signed in, go to "Datasets" and click "New dataset."
@@ -308,6 +330,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1ptX1nWuUYckkX7KOyGRkEyLlmeJFG871"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 - Choose the spotify_data database and the datawarehouse table.
 
@@ -316,6 +339,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1yhza-4_PTA5vlD9AjzW4lWWX0ldTrTkU"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 
 3. **Create Visualizations**
     - After importing the data, you can create various types of visualizations (e.g., bar charts, line charts, pie charts) using the fields from the datawarehouse table.
@@ -325,6 +349,7 @@ All files are manually uploaded to S3 for this project.
     src="https://drive.google.com/uc?export=view&id=1cKCkU9MUDLNv85y6LfQUQqruYiO4oK3h"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
+</p>
 ---
 
-*Inspired by Data with Baraa!*
+*Inspired by Date with Data!*
