@@ -59,11 +59,11 @@ All files are manually uploaded to S3 for this project.
         - AWS Glue Console Full Access
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1RcvcT6Vq3b7HAEJowLSVfVpUbU2fskCB" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1RcvcT6Vq3b7HAEJowLSVfVpUbU2fskCB" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1P0cRZrn0L-j2RNllYiemwIdjiiEKTu6N" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1P0cRZrn0L-j2RNllYiemwIdjiiEKTu6N" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 
@@ -74,14 +74,14 @@ All files are manually uploaded to S3 for this project.
     - `datawarehouse/`: for storing transformed data
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1aABEeU4gas9zuKZvX_Fy0vDjZKUVmyOu" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1aABEeU4gas9zuKZvX_Fy0vDjZKUVmyOu" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 
 2. **Upload Pre-Processed CSV Files to the staging folder**
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1R5V4jqvFPRN8GeDLja3JZAyLwnyU_gWy" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1R5V4jqvFPRN8GeDLja3JZAyLwnyU_gWy" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 
@@ -91,29 +91,29 @@ All files are manually uploaded to S3 for this project.
     - Navigate to the AWS Glue Console and select Visual ETL to create a visual workflow that transforms data from the staging folder and loads it into the datawarehouse folder.
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1UNk93GGM2SouQCjiTbFCJq-yxXToWK1n" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1UNk93GGM2SouQCjiTbFCJq-yxXToWK1n" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 2. **Set Up Data Sources**
     - Since there are three source files, use three Amazon S3 source nodes.
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1f-RBuY_amXEzj2OTEqqhnXiTmYrx-goe" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1f-RBuY_amXEzj2OTEqqhnXiTmYrx-goe" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
  <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1Tdm4OhUlVWNCamtBGDvZK0_t31Q8NJrd" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1Tdm4OhUlVWNCamtBGDvZK0_t31Q8NJrd" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
  <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1_qrQiPvW5_3Ya-Lv0CbyNVYzUYcvmTuE" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1_qrQiPvW5_3Ya-Lv0CbyNVYzUYcvmTuE" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
 3. **Configure Data Transformations:**
     - To join album and artist, click on the ADD symbol, select join from Transforms and connect nodes as per your workflow.
 
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1J8OUlKj6NElw87eXJxPKdonbOMK34PG9" style="margin-top: 40px; margin-bottom: 40px; />
+  <img src="https://drive.google.com/uc?export=view&id=1J8OUlKj6NElw87eXJxPKdonbOMK34PG9" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
     
     - Add a condition where `artist.id = albums.artist_id` and rename the join as “Join Album and Artist”.
