@@ -5,10 +5,12 @@
 In today's data-driven world, building scalable and cost-efficient data pipelines in the cloud is a key skill for aspiring data engineers. This project demonstrates how to build an end-to-end data engineering pipeline on AWS, using a real-world dataset from Spotify. We’ll process, analyze, and visualize a real-world dataset from Spotify, using tools like Amazon S3, AWS Glue, Athena, and QuickSight.
 
 ## Architecture
-
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1C4w89z0UMc9_cTItqgWs6FoJeKhAaDHd" alt="Description of image" />
-</p>
+  <img 
+    src="https://drive.google.com/uc?export=view&id=1C4w89z0UMc9_cTItqgWs6FoJeKhAaDHd"
+    alt="Description of image"
+    style="margin-top: 30px; margin-bottom: 30px;" 
+  />
 
 
 ## Tools & Services
