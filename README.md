@@ -165,7 +165,7 @@ All files are manually uploaded to S3 for this project.
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
   
-    - Check whether the transformed data is inside the datawarehouse folder.
+- Check whether the transformed data is inside the datawarehouse folder.
 
 <p align="center">
   <img 
@@ -193,7 +193,7 @@ All files are manually uploaded to S3 for this project.
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
   
-    - Provide a Crawler Name.
+  - Provide a Crawler Name.
 
  <p align="center">
   <img 
@@ -201,7 +201,7 @@ All files are manually uploaded to S3 for this project.
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
 
-    - Add Data Store: Select S3 and provide the path to the datawarehouse folder.
+  - Add Data Store: Select S3 and provide the path to the datawarehouse folder.
 
 <p align="center">
   <img 
@@ -215,14 +215,14 @@ All files are manually uploaded to S3 for this project.
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
   
-    - Provide the IAM Role created earlier.
+  - Provide the IAM Role created earlier.
 
 <p align="center">
   <img 
     src="https://drive.google.com/uc?export=view&id=15_1lovaEK3jAZD7XyMgYYzWBqApI2yV0"
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
-    - Select the created database.
+  - Select the created database.
 
 <p align="center">
   <img 
@@ -239,7 +239,7 @@ All files are manually uploaded to S3 for this project.
     style="margin-top: 40px; margin-bottom: 40px;" 
   />
 
-    - Check the database tables.
+  - Check the database tables.
 
 <p align="center">
   <img 
