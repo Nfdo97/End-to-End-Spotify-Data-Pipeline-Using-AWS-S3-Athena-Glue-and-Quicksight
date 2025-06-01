@@ -6,7 +6,7 @@ In today's data-driven world, building scalable and cost-efficient data pipeline
 
 ## Architecture
 
-*Insert your architecture diagram here if available.*
+![Screenshot 0](https://drive.google.com/file/d/1C4w89z0UMc9_cTItqgWs6FoJeKhAaDHd/view?usp=sharing)
 
 ## Tools & Services
 
