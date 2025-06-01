@@ -116,9 +116,9 @@ All files are manually uploaded to S3 for this project.
   <img src="https://drive.google.com/uc?export=view&id=1J8OUlKj6NElw87eXJxPKdonbOMK34PG9" style="margin-top: 40px; margin-bottom: 40px;" />
 </p>
 
--  Add a join condition where `artist.id = albums.artist_id` and rename this join as **"Join Album and Artist"**.
--  Add another **Join Transform** to join the **tracks S3 bucket** with the result of the previous join.
--  To drop unnecessary columns, select **Drop Fields** from the **Transforms** node.
+    -  Add a join condition where `artist.id = albums.artist_id` and rename this join as **"Join Album and Artist"**.
+    -  Add another **Join Transform** to join the **tracks S3 bucket** with the result of the previous join.
+    -  To drop unnecessary columns, select **Drop Fields** from the **Transforms** node.
    
 <p align="center">
   <img 
